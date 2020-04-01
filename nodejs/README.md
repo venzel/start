@@ -33,3 +33,11 @@ $ sudo docker run --name mongodb -p 27017:27017 -d mongo
 # OBS: para testar acessa: http://localhost:27017/
 # OBS: utileze o ROBO 3T para gerenciar o mongo
 ```
+
+### Base url para o insominia
+
+```
+{
+  "base_url": "http://localhost:3001/api"
+}
+```
