@@ -1,7 +1,8 @@
-const conection = require('../services/conection')
+const connection = require('../services/connection/mongoose')
+
 const mongoosePaginate = require('mongoose-paginate')
 
-const ProductSchema = conection.Schema({
+const ProductSchema = connection.Schema({
     title: {
         type: String,
         required: true,
@@ -12,6 +13,6 @@ const ProductSchema = conection.Schema({
     },
 })
 
-ProductSchema.plugin(mongoosePaginate)
+connection.plugin(mongoosePaginate)
 
-conection.model('Product', ProductSchema)
+connection.model('Product', ProductSchema)
